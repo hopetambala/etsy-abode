@@ -1,2 +1,2 @@
-# etsy-living-next-gen
+# etsy-living
 EtsyLiving is a next-gen shopping experience—an immersive, creator-driven marketplace for statement furniture and home essentials. Step into virtual showrooms crafted by independent makers or bring handcrafted pieces directly into your space using AR. Whether you're exploring a VR loft filled with artisan dining tables or placing a sculpted oak credenza in your living room, EtsyVerse bridges story and space, craftsmanship and context.
