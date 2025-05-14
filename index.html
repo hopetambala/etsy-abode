@@ -15,6 +15,7 @@
   <a-scene>
     <!-- Load the assets into the scene -->
     <a-assets>
+      <!-- Furniture -->
       <a-asset-item id="richmond-stool"
         src="assets/listings/furniture/richmond-stool/richmond-stool.obj"></a-asset-item>
       <a-asset-item id="richmond-stool-mtl"
@@ -35,10 +36,11 @@
         src="assets/listings/furniture/karline-sofa-bench-ottoman/karline-sofa-bench-ottoman.obj"></a-asset-item>
       <a-asset-item id="karline-sofa-bench-ottoman-mtl"
         src="assets/listings/furniture/karline-sofa-bench-ottoman/karline-sofa-bench-ottoman.mtl"></a-asset-item>
-      <a-asset-item id="pixar-lamp"
-        src="assets/listings/furniture/pixar-lamp/pixar-lamp.obj"></a-asset-item>
-      <a-asset-item id="pixar-lamp-mtl"
-        src="assets/listings/furniture/pixar-lamp/"></a-asset-item>
+      <a-asset-item id="pixar-lamp" src="assets/listings/furniture/pixar-lamp/pixar-lamp.obj"></a-asset-item>
+      <a-asset-item id="pixar-lamp-mtl" src="assets/listings/furniture/pixar-lamp/"></a-asset-item>
+      <!-- Buildings -->
+      <a-asset-item id="storeroom" src="assets/buildings/storeroom/storeroom.obj"></a-asset-item>
+      <a-asset-item id="storeroom-mtl" src="assets/buildings/storeroom/materials.mtl"></a-asset-item>
 
 
     </a-assets>
@@ -48,24 +50,25 @@
 
     <!-- Load Asset to Scene -->
     <a-entity obj-model="obj: #richmond-stool ; mtl: #richmond-stool-mtl" visible="true" position="-5.796
-     0.070 -4.000"
-      scale="3.0 3.0 3.0" rotation="-87.547 36.087 -54.222"></a-entity>
+     0.070 -4.000" scale="3.0 3.0 3.0" rotation="-87.547 36.087 -54.222"></a-entity>
     <a-entity obj-model="obj: #bed-moderno ; mtl: #bed-moderno-mtl" visible="true" position="1.8 0.10953 -10.884"
       scale="0.005 0.005 0.005" rotation="-89.28687800421183 29.301634600785434 -7.567053600292782"></a-entity>
-    <a-entity obj-model="obj: #sofa-milana-corner ; mtl: #sofa-milana-corner-mtl" visible="true" position="-3.933 0.070 -7.760"
-    scale="3.0 3.0 3.0" rotation="-87.547 36.087 -54.222"></a-entity>
-    <a-entity obj-model="obj: #wave-series-table ; mtl: #wave-series-table-mtl" visible="true" position="-10.661 0.070 -0.338"
-    scale="5.0 5.0 5.0" rotation="-87.547 36.087 -54.222"></a-entity>
-    <a-entity obj-model="obj: #karline-sofa-bench-ottoman ; mtl: #karline-sofa-bench-ottoman-mtl" visible="true" position="-11.356 0.070 2.530"
-    scale="200.0 200.0 200.0" rotation="-87.547 36.087 -54.222"></a-entity>
+    <a-entity obj-model="obj: #sofa-milana-corner ; mtl: #sofa-milana-corner-mtl" visible="true"
+      position="-3.933 0.070 -7.760" scale="3.0 3.0 3.0" rotation="-87.547 36.087 -54.222"></a-entity>
+    <a-entity obj-model="obj: #wave-series-table ; mtl: #wave-series-table-mtl" visible="true"
+      position="-10.661 0.070 -0.338" scale="5.0 5.0 5.0" rotation="-87.547 36.087 -54.222"></a-entity>
+    <a-entity obj-model="obj: #karline-sofa-bench-ottoman ; mtl: #karline-sofa-bench-ottoman-mtl" visible="true"
+      position="-11.356 0.070 2.530" scale="200.0 200.0 200.0" rotation="-87.547 36.087 -54.222"></a-entity>
     <a-entity obj-model="obj: #pixar-lamp ; mtl: #pixar-lamp-mtl" visible="true" position="-10.602 2.039 -0.402"
-    scale="3.0 3.0 3.0" rotation="-87.547 36.087 -54.222"></a-entity>
+      scale="3.0 3.0 3.0" rotation="-87.547 36.087 -54.222"></a-entity>
+    <a-entity obj-model="obj: #storeroom ; mtl: #storeroom-mtl" visible="true" position="22.536 -0.451 -16.656"
+      scale="0.057 0.045 0.125" rotation="-0.128 -89.875 -0.535"></a-entity>
 
     <!-- <a-camera>
       <a-cursor color="#FAFAFA"></a-cursor>
     </a-camera> -->
-     <!-- Camera rig -->
-     <a-entity id="rig" position="0 0 0">
+    <!-- Camera rig -->
+    <a-entity id="rig" position="0 0 0">
       <a-camera wasd-controls-enabled="true" look-controls></a-camera>
       <a-entity id="rightHand" oculus-touch-controls="hand: right"></a-entity>
     </a-entity>
