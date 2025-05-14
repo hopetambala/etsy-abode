@@ -12,7 +12,9 @@ document.addEventListener("DOMContentLoaded", () => {
         const { x, y } = evt.detail;
   
         // Invert y so pushing forward moves forward
-        self.direction.set(x, 0, -y).normalize();
+        // self.direction.set(x, 0, -y).normalize();
+        self.direction.set(x, 0, y).normalize();
+
       });
   
       self.leftHand.addEventListener('thumbstickdown', () => {
