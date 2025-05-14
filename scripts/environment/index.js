@@ -8,6 +8,7 @@ document.addEventListener("DOMContentLoaded", () => {
   sky.setAttribute("src", "#skyTexture");
   sky.setAttribute("theta-length", "90");
   sky.setAttribute("width", "2048");
+  // sky.setAttribute("color", "#ECECEC");
   scene.appendChild(sky);
 
   // Ground plane
