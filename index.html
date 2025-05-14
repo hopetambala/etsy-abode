@@ -1,25 +1,40 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>EtsyAbode</title>
-    <meta name="description" content="EtsyAbode">
-    <script src="scripts/aframe.min.js"></script>
-    <script src="scripts/textures/index.js"></script>
-    <script src="scripts/objects/index.js"></script>
-    <script src="scripts/environment/index.js"></script>
-  </head>
-  <body>
-    <a-scene>
-      
-      <a-light type="ambient" color="#445451"></a-light>
-      <a-light type="point" intensity="2" position="2 4 4"></a-light>
-      <a-text value="It's Happening!" color="#BBB" position="-0.9 0.2 -3" scale="1.5 1.5 1.5"></a-text>
-      <a-entity id="leftHand" hand-tracking-controls="hand: left;"></a-entity>
-      <a-entity id="rightHand" hand-tracking-controls="hand: right;"></a-entity>
-      
-      <a-camera>
-        <a-cursor color="#FAFAFA"></a-cursor>
-      </a-camera>
-    </a-scene>
-  </body>
+
+<head>
+  <title>EtsyAbode</title>
+  <meta name="description" content="EtsyAbode">
+  <script src="scripts/aframe.min.js"></script>
+  <script src="scripts/textures/index.js"></script>
+  <script src="scripts/objects/index.js"></script>
+  <script src="scripts/environment/index.js"></script>
+</head>
+
+<body>
+  <a-scene>
+    <!-- Load the assets into the scene -->
+    <a-assets>
+      <a-asset-item id="richmond-stool"
+        src="assets/listings/furniture/richmond-stool/richmond-stool.obj"></a-asset-item>
+      <a-asset-item id="richmond-stool-mtl"
+        src="assets/listings/furniture/richmond-stool/richmond-stool.mtl"></a-asset-item>
+      <a-asset-item id="bed-moderno" src="assets/listings/furniture/blastation-armchair/blastation-armchair.obj"></a-asset-item>
+      <a-asset-item id="bed-moderno-mtl" src="assets/listings/furniture/blastation-armchair/blastation-armchair.mtl"></a-asset-item>
+
+
+    </a-assets>
+    <a-light type="ambient" color="#445451"></a-light>
+    <a-light type="point" intensity="2" position="2 4 4"></a-light>
+    <!-- <a-text value="It's Happening!" color="#BBB" position="-0.9 0.2 -3" scale="1.5 1.5 1.5"></a-text> -->
+
+    <!-- Load Asset to Scene -->
+    <a-entity obj-model="obj: #richmond-stool ; mtl: #richmond-stool-mtl" visible="true" position="-1.141 0.070 -3.273"
+      scale="1.5 1.5 1.5" rotation="-87.547 36.087 -54.222"></a-entity>
+      <a-entity obj-model="obj: #bed-moderno ; mtl: #bed-moderno-mtl" visible="true" position="1.8 0.10953 -10.884" scale="0.005 0.005 0.005" rotation="-89.28687800421183 29.301634600785434 -7.567053600292782"></a-entity>
+    <a-camera>
+      <a-cursor color="#FAFAFA"></a-cursor>
+    </a-camera>
+  </a-scene>
+</body>
+
 </html>

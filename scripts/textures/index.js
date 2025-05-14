@@ -4,9 +4,9 @@ document.addEventListener("DOMContentLoaded", () => {
   // Assets
   const assets = document.createElement("a-assets");
 
-  const boxTexture = document.createElement("img");
-  boxTexture.id = "boxTexture";
-  boxTexture.src = "https://i.imgur.com/mYmmbrp.jpg";
+  // const boxTexture = document.createElement("img");
+  // boxTexture.id = "boxTexture";
+  // boxTexture.src = "https://i.imgur.com/mYmmbrp.jpg";
 
   const groundTexture = document.createElement("img");
   groundTexture.id = "groundTexture";
