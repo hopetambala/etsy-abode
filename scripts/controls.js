@@ -6,20 +6,20 @@ document.addEventListener("DOMContentLoaded", () => {
     init: function () {
       const self = this;
       self.direction = new THREE.Vector3();
-      self.rightHand = document.querySelector('#rightHand');
+      self.leftHand = document.querySelector('#leftHand');
   
-      self.rightHand.addEventListener('thumbstickmoved', function (evt) {
+      self.leftHand.addEventListener('thumbstickmoved', function (evt) {
         const { x, y } = evt.detail;
   
         // Invert y so pushing forward moves forward
         self.direction.set(x, 0, -y).normalize();
       });
   
-      self.rightHand.addEventListener('thumbstickdown', () => {
+      self.leftHand.addEventListener('thumbstickdown', () => {
         // Optional: could be used to toggle run/walk
       });
   
-      self.rightHand.addEventListener('thumbstickup', () => {
+      self.leftHand.addEventListener('thumbstickup', () => {
         self.direction.set(0, 0, 0); // stop when thumbstick is released
       });
     },
