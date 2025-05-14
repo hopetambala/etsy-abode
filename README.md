@@ -13,7 +13,7 @@ python3 -m http.server
 
 ## How to visually inspect 
 
-`shift + control + option i``
+`shift + control + option i`
 
 ## How we built this
 
@@ -21,12 +21,15 @@ a-Frame is a web framework for building virtual reality (VR) experiences. A-Fram
 
 https://aframe.io/examples/showcase/helloworld/
 
-
 ## Where we got our furniture
 
 https://free3d.io/#gsc.tab=0
 
-
 ## NGROK
 
 https://c56a-192-147-1-50.ngrok-free.app/
+
+
+## Production
+
+https://hopetambala.github.io/etsy-abode/
