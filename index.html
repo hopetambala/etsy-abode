@@ -77,12 +77,11 @@
       scale="0.065 0.045 0.125" rotation="-0.128 -89.875 -0.535"></a-entity>
     <!-- Hands -->
    
-    <a-entity id="rig" position="0 2 0">
+    <a-entity id="rig" position="0 2 0" thumbstick-movement>
       <a-camera wasd-controls-enabled="true" look-controls></a-camera>
-      <a-entity id="leftHand" hand-controls="hand: left; handModelStyle: lowPoly; color: #ffcccc"></a-entity>
-      <a-entity id="rightHand" hand-controls="hand: right; handModelStyle: lowPoly; color: #ffcccc"></a-entity>
+      <a-entity id="leftHand" hand-controls="hand: left; handModelStyle: lowPoly; color: #ffcccc" thumbstick-logging></a-entity>
+      <a-entity id="rightHand" hand-controls="hand: right; handModelStyle: lowPoly; color: #ffcccc" thumbstick-logging oculus-touch-controls></a-entity>
     </a-entity>
   </a-scene>
 </body>
-
 </html>

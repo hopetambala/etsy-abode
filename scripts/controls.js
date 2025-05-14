@@ -1,34 +1,47 @@
-AFRAME.registerComponent('joystick-move', {
-  tick: function () {
-    const rig = this.el;
-    const rightController = document.querySelector('#rightHand');
-    const gamepad = rightController.components['oculus-touch-controls']?.controller;
-
-    if (!gamepad) return;
-
-    const axes = gamepad.axes;
-
-    // Typically: [x-axis, y-axis] for thumbstick
-    const x = axes[2]; // left/right
-    const y = axes[3]; // forward/back
-
-    if (Math.abs(x) > 0.1 || Math.abs(y) > 0.1) {
-      const camera = document.querySelector('a-camera');
-      const cameraRotation = camera.object3D.rotation.y;
-
-      const speed = 0.05;
-
-      // Translate input based on head direction (XZ only)
-      const dx = -y * Math.sin(cameraRotation) + x * Math.cos(cameraRotation);
-      const dz = -y * Math.cos(cameraRotation) - x * Math.sin(cameraRotation);
-
-      rig.object3D.position.x += dx * speed;
-      rig.object3D.position.z += dz * speed;
+document.addEventListener("DOMContentLoaded", () => {
+  AFRAME.registerComponent('thumbstick-movement', {
+    schema: {
+      speed: { type: 'number', default: 0.1 }
+    },
+    init: function () {
+      const self = this;
+      self.direction = new THREE.Vector3();
+      self.rightHand = document.querySelector('#rightHand');
+  
+      self.rightHand.addEventListener('thumbstickmoved', function (evt) {
+        const { x, y } = evt.detail;
+  
+        // Invert y so pushing forward moves forward
+        self.direction.set(x, 0, -y).normalize();
+      });
+  
+      self.rightHand.addEventListener('thumbstickdown', () => {
+        // Optional: could be used to toggle run/walk
+      });
+  
+      self.rightHand.addEventListener('thumbstickup', () => {
+        self.direction.set(0, 0, 0); // stop when thumbstick is released
+      });
+    },
+    tick: function (time, deltaTime) {
+      const el = this.el;
+      const direction = this.direction.clone();
+  
+      if (direction.lengthSq() === 0) return;
+  
+      const cam = el.querySelector('a-camera');
+      if (!cam) return;
+  
+      // Use the camera’s rotation to move in the direction the player is looking
+      const camObj = cam.object3D;
+      const camDir = new THREE.Vector3();
+      camObj.getWorldDirection(camDir);
+      camDir.y = 0; // prevent vertical movement
+  
+      const moveVector = new THREE.Vector3();
+      moveVector.copy(direction).applyAxisAngle(new THREE.Vector3(0, 1, 0), camObj.rotation.y);
+  
+      el.object3D.position.addScaledVector(moveVector, this.data.speed);
     }
-  }
-});
-
-window.addEventListener('DOMContentLoaded', () => {
-  const rig = document.querySelector('#rig');
-  rig.setAttribute('joystick-move', '');
+  });
 });
