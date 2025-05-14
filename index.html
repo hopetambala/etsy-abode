@@ -8,6 +8,7 @@
   <script src="scripts/textures/index.js"></script>
   <script src="scripts/objects/index.js"></script>
   <script src="scripts/environment/index.js"></script>
+  <script src="scripts/controls.js"></script>
 </head>
 
 <body>
@@ -18,8 +19,10 @@
         src="assets/listings/furniture/richmond-stool/richmond-stool.obj"></a-asset-item>
       <a-asset-item id="richmond-stool-mtl"
         src="assets/listings/furniture/richmond-stool/richmond-stool.mtl"></a-asset-item>
-      <a-asset-item id="bed-moderno" src="assets/listings/furniture/blastation-armchair/blastation-armchair.obj"></a-asset-item>
-      <a-asset-item id="bed-moderno-mtl" src="assets/listings/furniture/blastation-armchair/blastation-armchair.mtl"></a-asset-item>
+      <a-asset-item id="bed-moderno"
+        src="assets/listings/furniture/blastation-armchair/blastation-armchair.obj"></a-asset-item>
+      <a-asset-item id="bed-moderno-mtl"
+        src="assets/listings/furniture/blastation-armchair/blastation-armchair.mtl"></a-asset-item>
 
 
     </a-assets>
@@ -30,16 +33,17 @@
     <!-- Load Asset to Scene -->
     <a-entity obj-model="obj: #richmond-stool ; mtl: #richmond-stool-mtl" visible="true" position="-1.141 0.070 -3.273"
       scale="1.5 1.5 1.5" rotation="-87.547 36.087 -54.222"></a-entity>
-      <a-entity obj-model="obj: #bed-moderno ; mtl: #bed-moderno-mtl" visible="true" position="1.8 0.10953 -10.884" scale="0.005 0.005 0.005" rotation="-89.28687800421183 29.301634600785434 -7.567053600292782"></a-entity>
-      <!-- <a-plane src="#groundTexture" rotation="-90 0 0" height="100" width="100" scale="0.25 0.25 0.25" position="0 0 -17.63512"></a-plane>
-      <a-plane src="#groundTexture" rotation="-90 0 0" height="100" width="100" scale="0.25 0.25 0.25" position="0 0 7.48292"></a-plane>
-      <a-plane src="#groundTexture" rotation="-90 0 0" height="100" width="100" scale="0.25 0.25 0.25" position="22.8612 0 7.53255"></a-plane>
-      <a-plane src="#groundTexture" rotation="-90 0 0" height="100" width="100" scale="0.25 0.25 0.25" position="22.8612 0 -17.59317"></a-plane>
-      <a-plane src="#groundTexture" rotation="-90 0 0" height="100" width="100" scale="0.25 0.25 0.25" position="-19.42195 0 7.53255"></a-plane>
-      <a-plane src="#groundTexture" rotation="-90 0 0" height="100" width="100" scale="0.25 0.25 0.25" position="-19.42195 0 -17.63252"></a-plane> -->
-    <a-camera>
+    <a-entity obj-model="obj: #bed-moderno ; mtl: #bed-moderno-mtl" visible="true" position="1.8 0.10953 -10.884"
+      scale="0.005 0.005 0.005" rotation="-89.28687800421183 29.301634600785434 -7.567053600292782"></a-entity>
+
+    <!-- <a-camera>
       <a-cursor color="#FAFAFA"></a-cursor>
-    </a-camera>
+    </a-camera> -->
+     <!-- Camera rig -->
+     <a-entity id="rig" position="0 1.6 0">
+      <a-camera wasd-controls-enabled="true" look-controls></a-camera>
+      <a-entity id="rightHand" oculus-touch-controls="hand: right"></a-entity>
+    </a-entity>
   </a-scene>
 </body>
 

@@ -15,9 +15,9 @@ document.addEventListener("DOMContentLoaded", () => {
   const plane = document.createElement("a-plane");
   plane.setAttribute("src", "#groundTexture");
   plane.setAttribute("rotation", "-90 0 0");
-  // plane.setAttribute("scale", "75 50 5");
   plane.setAttribute("height", "100");
   plane.setAttribute("width", "100");
+  // plane.setAttribute("color", "#7BC8A4");
   scene.appendChild(plane);
 
 });
