@@ -1,0 +1,54 @@
+# 
+# Wavefront material file
+# Converted by the DEEP Exploration  Deep Exploration 6.3 x64 6.3.3.8069
+# Right Hemisphere, LTD
+# http://www.righthemisphere.com/
+# 
+
+newmtl Chrome
+Ka 0.72549 0.72549 0.72549
+Kd 0.72549 0.72549 0.72549
+Ks 1 1 1
+illum 2
+Ns 512
+map_Kd 
+map_bump 
+bump 
+map_opacity 
+map_d 
+refl 
+map_kS 
+map_kA 
+map_Ns 
+
+newmtl Wood
+Ka 0.705882 0.521569 0.113725
+Kd 0.705882 0.521569 0.113725
+Ks 1 1 1
+illum 2
+Ns 128
+map_Kd bakr-221.png
+map_bump 
+bump 
+map_opacity 
+map_d 
+refl 
+map_kS 
+map_kA 
+map_Ns 
+
+newmtl Wood_Plastic
+Ka 0.941177 0.913726 0.819608
+Kd 0.941177 0.913726 0.819608
+Ks 1 1 1
+illum 2
+Ns 128
+map_Kd 
+map_bump 
+bump 
+map_opacity 
+map_d 
+refl 
+map_kS 
+map_kA 
+map_Ns 

@@ -47,10 +47,18 @@
         src="assets/listings/furniture/bed-wood-single/bed-wood-single.obj"></a-asset-item>
       <a-asset-item id="bed-wood-single-mtl"
         src="assets/listings/furniture/bed-wood-single/bed-wood-single.mtl"></a-asset-item>
-      <!-- <a-asset-item id="industrial-bed"
-        src="assets/listings/furniture/industrial-bed/industrial-bed.obj"></a-asset-item>
-      <a-asset-item id="industrial-bed-mtl"
-        src="assets/listings/furniture/industrial-bed/industrial-bed.mtl"></a-asset-item> -->
+      <a-asset-item id="baker-bedside-chest"
+        src="assets/listings/furniture/baker-bedside-chest/baker-bedside-chest.obj"></a-asset-item>
+      <a-asset-item id="baker-bedside-chest-mtl"
+        src="assets/listings/furniture/baker-bedside-chest/baker-bedside-chest.mtl"></a-asset-item> 
+      <a-asset-item id="bar-stand-globe"
+        src="assets/listings/furniture/bar-stand-globe/bar-stand-globe.obj"></a-asset-item>
+      <a-asset-item id="bar-stand-globe-mtl"
+        src="assets/listings/furniture/bar-stand-globe/bar-stand-globe.mtl"></a-asset-item> 
+      <a-asset-item id="floor-lamp"
+        src="assets/listings/furniture/floor-lamp/floor-lamp.obj"></a-asset-item>
+      <a-asset-item id="floor-lamp-mtl"
+        src="assets/listings/furniture/floor-lamp/floor-lamp.mtl"></a-asset-item> 
 
 
     </a-assets>
@@ -71,14 +79,19 @@
       position="1.413 -0.059 -12.757" scale="200.0 200.0 200.0" rotation="-87.547 57.416 -54.222"></a-entity>
     <a-entity obj-model="obj: #pixar-lamp ; mtl: #pixar-lamp-mtl" visible="true" position="-11.862 1.793 -3.794"
       scale="3.0 3.0 3.0" rotation="-87.547 36.087 -54.222"></a-entity>
-    <a-entity obj-model="obj: #bed-wood-single ; mtl: #bed-wood-single-mtl" visible="true"
-      position="-8.390 0.103 11.891" scale="5.0 5.0 5.0" rotation="-89.615 -118.095 120.146"></a-entity>
     <a-entity obj-model="obj: #storeroom ; mtl: #storeroom-mtl" visible="true" position="22.532 -0.433 -18.576"
       scale="0.065 0.045 0.125" rotation="-0.128 -89.875 -0.535"></a-entity>
-    <!-- Hands -->
-   
-    <a-entity id="rig" position="0 2 0" thumbstick-movement>
+    <a-entity obj-model="obj: #bed-wood-single ; mtl: #bed-wood-single-mtl" visible="true" position="-8.390 0.103 11.891"
+    scale="5.0 5.0 5.0" rotation="-89.615 -118.095 120.146"></a-entity>
+    <a-entity obj-model="obj: #baker-bedside-chest ; mtl: #baker-bedside-chest-mtl" visible="true" position="-11.317 0.010 9.041"
+    scale="0.004 0.004 0.004" rotation="-89.615 -28.526 120.146"></a-entity>
+    <a-entity obj-model="obj: #bar-stand-globe ; mtl: #bar-stand-globe" visible="true" position="-0.380 0.086 12.510"
+    scale="0.1 0.1 0.1" rotation="0.121 5.883 2.023"></a-entity>
+    <a-entity obj-model="obj: #floor-lamp ; mtl: #floor-lamp-mtl" visible="true" position="-9.213 0.086 6.574"
+    scale="0.004 0.004 0.004" rotation="-87.257 46.268 -42.873"></a-entity>
+     <a-entity id="rig" position="0 2 0" thumbstick-movement>
       <a-camera wasd-controls-enabled="true" look-controls></a-camera>
+       <!-- Hands -->
       <a-entity id="leftHand" hand-controls="hand: left; handModelStyle: lowPoly; color: #ffcccc" thumbstick-logging></a-entity>
       <a-entity id="rightHand" hand-controls="hand: right; handModelStyle: lowPoly; color: #ffcccc" thumbstick-logging oculus-touch-controls></a-entity>
     </a-entity>
