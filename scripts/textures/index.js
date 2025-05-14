@@ -3,11 +3,11 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const groundTexture = document.createElement("img");
   groundTexture.id = "groundTexture";
-  groundTexture.src = "https://cdn.aframe.io/a-painter/images/floor.jpg";
+  groundTexture.src = "assets/environment/ground.png";
 
   const skyTexture = document.createElement("img");
   skyTexture.id = "skyTexture";
-  skyTexture.src = "assets/environment/sky.jpg";
+  skyTexture.src = "assets/environment/brightsky.png";
 
   assets.append(groundTexture, skyTexture);
 });
